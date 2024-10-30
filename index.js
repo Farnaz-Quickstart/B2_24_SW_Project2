@@ -10,7 +10,7 @@ async function displayData() {
     const response = await fetch (endPintGet)
     let data = await response.json()
       data.data.forEach(element => {
-        let newImage = document.createElement ("img")
+        
         // Add code
       });
   } catch {
@@ -19,16 +19,12 @@ async function displayData() {
 
   fetch(giphyApi)
   .then(response => {
-    if (!response.ok) throw new Error("Error");
     return response.json();
   })
   .then(data => {
     data.data.forEach(element => {
            // Add code
     });
-  })
-  .catch(error => {
-    console.error("There was a problem with the fetch operation:", error);
   });
 }
 
