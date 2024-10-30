@@ -11,13 +11,7 @@ async function displayData() {
     let data = await response.json()
       data.data.forEach(element => {
         let newImage = document.createElement ("img")
-        newImage.src = element.images.original.url
-        newImage.className = "giphy_img"
-        console.log (newImage)
-
-        let section_image = document.getElementById ("section_image")
-        section_image.appendChild (newImage)
-        console.log (section_image)
+        // Add code
       });
   } catch {
 
@@ -25,20 +19,12 @@ async function displayData() {
 
   fetch(giphyApi)
   .then(response => {
-    // Handle response and convert to JSON
-    if (!response.ok) throw new Error("Network response was not ok.");
+    if (!response.ok) throw new Error("Error");
     return response.json();
   })
   .then(data => {
-    // Loop through each GIF and create an image element
     data.data.forEach(element => {
-      const newImage = document.createElement("img");
-      newImage.src = element.images.original.url;
-      newImage.className = "giphy_img";
-
-      const section_image = document.getElementById("section_image");
-      section_image.appendChild(newImage);
-      console.log(newImage);
+           // Add code
     });
   })
   .catch(error => {
